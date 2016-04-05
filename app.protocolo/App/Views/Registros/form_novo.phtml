@@ -1,0 +1,136 @@
+<!-- Page Content -->
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h5 class="page-header"><?=$this->view->title?></h5>
+                
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-table fa-fw"></i> Formulário de Cadastro
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <div id="resultado"></div>
+                        <form action="<?=$this->view->controller;?>registra/" method="post" id="form">
+                        <div class="row">
+                            <div class="col-lg-6">
+
+                                <div class="form-group">
+                                    <label>Número</label>
+                                    <input type="text"
+                                           id="number"
+                                           name="number"
+                                           placeholder="Número do Documento"
+                                           class="form-control"
+                                           maxlength="10"
+                                           autocomplete="off"
+                                           required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>OM</label>
+                                    <select name="om"
+                                            id="om"
+                                            class="form-control"
+                                            required>
+                                        <?php foreach ($this->view->resultOm as $key => $value): ?>
+                                        <option value="<?= $value['initials']; ?>">
+                                            <?= $value['initials']; ?>
+                                        </option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Data/Hora</label>
+                                    <input type="text"
+                                           id="time"
+                                           name="time"
+                                           placeholder="Data/Hora do Status (dd/mm/aaaa-00:00)"
+                                           class="form-control"
+                                           maxlength="16"
+                                           autocomplete="off"
+                                           value="<?=date('d/m/Y-H:i');?>"
+                                           required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Tipo</label>
+                                    <input type="text"
+                                           id="type"
+                                           name="type"
+                                           placeholder="Tipo do Documento"
+                                           class="form-control"
+                                           maxlength="20"
+                                           autocomplete="off"
+                                           required>
+                                </div>
+                                
+                            </div>
+
+                            <div class="col-lg-6">
+                                
+                                <div class="form-group">
+                                    <label>Valor (R$)</label>
+                                    <input type="text"
+                                           id="value"
+                                           name="value"
+                                           placeholder="Valor em Reais"
+                                           class="form-control"
+                                           maxlength="14"
+                                           autocomplete="off"
+                                           required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Status</label>
+                                    <select name="status"
+                                            id="status"
+                                            class="form-control"
+                                            required>
+                                        <?php foreach ($this->view->resultStatus as $key => $value): ?>
+                                        <option value="<?= $value['initials']; ?>">
+                                            <?= $value['initials']; ?>
+                                        </option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Nº Documento Resultante</label>
+                                    <input type="text"
+                                           id="docresult"
+                                           name="docresult"
+                                           placeholder="Número do Documento Resultante (Ex.: NE, NF, OB, PF)"
+                                           class="form-control"
+                                           value="---"
+                                           required>
+                                </div>
+
+                                <div class="form-group">
+                                    <br>
+                                    <button class="btn btn-primary"><i class="fa fa-check"></i> Registrar</button>
+                                    <a href="<?=$this->view->controller;?>" class="btn btn-warning"><i class="fa fa-arrow-left"></i> Voltar</a>
+                                </div>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</div>
+<!-- /#page-wrapper -->

@@ -1,0 +1,54 @@
+<!-- Page Content -->
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Lista de Organizações Militares</h3>
+                <i class="fa fa-list"></i> <?=$this->view->title;?><br>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Indicativo Naval</th> 
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($this->view->result as $value): ?>
+                        <tr>
+                            <td><?=$value['initials'];?></td> 
+                            <td>
+                                <a href="<?=$this->view->controller;?>protocolado/om/<?=$value['initials'];?>" class="btn btn-success">
+                                    <i class="fa fa-eye"></i> Visualizar Documentos
+                                </a>
+                            </td>
+                        </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+                
+                <nav class="no-print">
+                    <ul class="pagination">
+                        <li>
+                            <a href="<?=$this->view->controller;?>visualizar/pagina/<?=$this->view->btn['previus'];?>" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <?php foreach ($this->view->btn['link'] as $value): ?>
+                        <li><a href="<?=$this->view->controller;?>visualizar/pagina/<?=$value;?>"><?=$value;?></a></li>
+                        <?php endforeach;?>
+                        <li>
+                            <a href="<?=$this->view->controller;?>visualizar/pagina/<?=$this->view->btn['next'];?>" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</div>
+<!-- /#page-wrapper -->

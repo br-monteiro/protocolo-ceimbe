@@ -1,0 +1,92 @@
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <!-- formulário de busca -->
+                                <script>
+                                    function goSearch()
+                                    {
+                                        var searchBy = document.buscar.searchBy.value;
+                                        if (searchBy) {
+                                            window.location = '<?=APPDIR;?>buscar/visualizar/busca/' + searchBy;
+                                        }
+                                        return false;
+                                    }
+                                </script>
+                                <form action="" name="buscar" onsubmit="javascript: return goSearch()">
+                                    <input type="text" class="form-control" name="searchBy" placeholder="Buscar...">
+                                    <!-- <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </span> -->
+                                </form>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a href="<?=APPDIR;?>"><i class="fa fa-square"></i> Início</a>
+                        </li>
+                        
+                        <li>
+                            <a href="#"><i class="fa fa-square"></i> Usuários<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="<?=APPDIR;?>acesso/"><i class="fa fa-cogs fa-fw"></i> Gerenciar Usuários</a>
+                                </li>
+                                <li>
+                                    <a href="<?=APPDIR;?>acesso/novo/"><i class="fa fa-plus-circle fa-fw"></i> Novo Registro</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        
+                        <li>
+                            <a href="#"><i class="fa fa-square"></i> Registros<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="<?=APPDIR;?>registros/"><i class="fa fa-cogs fa-fw"></i> Gerenciar</a>
+                                </li>
+                                <li>
+                                    <a href="<?=APPDIR;?>registros/novo/"><i class="fa fa-plus-circle fa-fw"></i> Novo Registro</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        
+                        <li>
+                            <a href="#"><i class="fa fa-square"></i> Status<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="<?=APPDIR;?>status/"><i class="fa fa-cogs fa-fw"></i> Gerenciar</a>
+                                </li>
+                                <li>
+                                    <a href="<?=APPDIR;?>status/novo/"><i class="fa fa-plus-circle fa-fw"></i> Novo Registro</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        
+                        <li>
+                            <a href="#"><i class="fa fa-square"></i> OM<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="<?=APPDIR;?>om/"><i class="fa fa-cogs fa-fw"></i> Gerenciar</a>
+                                </li>
+                                <li>
+                                    <a href="<?=APPDIR;?>om/novo/"><i class="fa fa-plus-circle fa-fw"></i> Novo Registro</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        
+                        <li>
+                            <a href="<?=APPDIR;?>acesso/logout/"><i class="fa fa-power-off"></i> Sair</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
