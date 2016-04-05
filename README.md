@@ -1,5 +1,6 @@
-## Procolo-ceimbe
-Projeto criado com o HTR Firebird Framework 2.3 - Sistema de rotocolo usado no CeIMBe (Centro de Intendência da Marinha em Belém)
+## Procolo-CeIMBe
+Projeto criado com o HTR Firebird Framework 2.3
+Sistema de protocolo de documentos usado na Divisão de Obtenção e Divisão de Execução Financeira do CeIMBe (Centro de Intendência da Marinha em Belém)
 
 Este repositório contém apenas os arquivos da regra de negócio da aplicação.
 
@@ -31,6 +32,6 @@ Para acessar a aplicação a aplicação basta digitar o endereço no navegador
 **http://www.seudominio.com.br/protocolo**
 
 ### Créditos
-Esta aplicação foi desenvolvida por Bruno Monteiro <bruno.monteirodg@gmail.com> com o Framework HTR Firebird versão 2.3 sob a licença GNU GENERAL PUBLIC LICENSE - Version 3.
+Esta aplicação foi desenvolvida por [Bruno Monteiro](bruno.monteirodg@gmail.com) com o [HTR Firebird Framework](https://github.com/br-monteiro/HTR-Firebird-Framework) versão 2.3 sob a licença GNU GENERAL PUBLIC LICENSE - Version 3.
 
 ### LAUS DEO
